@@ -65,7 +65,7 @@ function stopRemoteServices() {
 // updates the project source on the server
 function updateRemoteApp() {
   return ssh.execCommand(
-    'cp -r starter-node-angular-temp-temp/* starter-node-angular-temp/ && rm -rf hackathon-starter-temp', {
+    'cp -r starter-node-angular-temp/* starter-node-angular-temp/ && rm -rf hackathon-starter-temp', {
       cwd: '/home/ubuntu'
   });
 }
