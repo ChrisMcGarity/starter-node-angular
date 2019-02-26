@@ -65,7 +65,7 @@ function stopRemoteServices() {
 // updates the project source on the server
 function updateRemoteApp() {
   return ssh.execCommand(
-    'cp -r starter-node-angular-temp/* starter-node-angular-temp/ && rm -rf hackathon-starter-temp', {
+    'cp -r starter-node-angular-temp/* starter-node-angular/ && rm -rf starter-node-angular-temp', {
       cwd: '/home/ubuntu'
   });
 }
@@ -87,7 +87,7 @@ function sshConnect() {
       // TODO: ADD YOUR IP ADDRESS BELOW (e.g. '12.34.5.67')
       host: 'ec2-18-212-88-46.compute-1.amazonaws.com',
       username: 'ubuntu',
-      privateKey: 's-n-a-key.pem'
+      privateKey: 'sna-key.pem'
     })
     .then(function() {
       console.log('SSH Connection established.');
